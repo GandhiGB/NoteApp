@@ -1,4 +1,4 @@
-package net.gbappsolution.noteapp.feature_note.presentation.util
+package net.gbappsolution.noteapp.feature_note.domain.util
 
 sealed class NoteOrder(
     val orderType: OrderType

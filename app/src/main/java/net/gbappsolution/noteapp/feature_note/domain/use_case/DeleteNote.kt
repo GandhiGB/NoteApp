@@ -1,13 +1,12 @@
-package net.gbappsolution.noteapp.feature_note.presentation.notes
+package net.gbappsolution.noteapp.feature_note.domain.use_case
 
-import kotlinx.coroutines.flow.Flow
 import net.gbappsolution.noteapp.feature_note.domain.model.Note
 import net.gbappsolution.noteapp.feature_note.domain.repository.NoteRepository
 
-class GetNotes(
+class DeleteNote (
     private val repository: NoteRepository
-) {
-    operator fun invoke(): Flow<List<Note>>{
-
+){
+    suspend operator fun invoke(note: Note){
+        repository.deleteNote(note)
     }
 }
